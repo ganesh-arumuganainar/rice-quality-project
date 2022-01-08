@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import {useState} from "react"
+import axios from 'axios'
 
 function App() {
 
   const [data, setData] = useState()
-  fetch('/').then(res=>//setData(res)
-  console.log(res.json()))
+  axios.get('http://127.0.0.1:8000/').then(res=>//setData(res)
+  console.log(res.data))
 
   //console.log(data)
 
