@@ -1,6 +1,6 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, File, UploadFile
 from starlette.middleware.cors import CORSMiddleware
-
+from riceQuality import getResults
 
 app = FastAPI()
 
@@ -18,4 +18,5 @@ app.add_middleware(
 )
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return getResults('rice.jpg')
+
