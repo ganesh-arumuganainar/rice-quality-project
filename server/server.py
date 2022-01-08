@@ -16,7 +16,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"]
 )
-@app.get("/")
-def read_root():
-    return getResults('rice.jpg')
+@app.post("/")
+def read_root(file: UploadFile = File(...)):
+    return getResults(file.filename)
 
