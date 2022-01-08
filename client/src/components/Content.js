@@ -2,11 +2,15 @@ import React from 'react'
 
 import { createUseStyles } from 'react-jss'
 
-function Content() {
+function Content(props) {
   const classes = styles()
   return (
     <div className={classes.container}>
-      <p className={classes.containerText}>This is where the content goes</p>
+      <p className={classes.containerText}>{props.example.Slender}</p>
+      <p className={classes.containerText}>{props.example.Medium}</p>
+      <p className={classes.containerText}>{props.example.Bold}</p>
+      <p className={classes.containerText}>{props.example.Round}</p>
+      <p className={classes.containerText}>{props.example[4]}</p>
     </div>
   )
 }
