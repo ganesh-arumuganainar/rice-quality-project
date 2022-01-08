@@ -3,3 +3,5 @@
 *.py
 
 /server/
+
+server/server.py
